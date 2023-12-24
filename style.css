@@ -17,7 +17,7 @@ body {
 
 nav {
     background-color: #000; /* Black background for the top navigation bar */
-    padding: 30px;
+    padding: 20px; /* Reduced padding for the navigation bar */
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -28,7 +28,8 @@ nav {
 
 nav h1 {
     color: #ddd;
-    margin-left: 30px; /* Adjusted margin for the h1 tag */
+    margin-left: 20px; /* Adjusted margin for the h1 tag */
+    font-size: 24px; /* Fixed font size for h1 */
 }
 
 nav ul {
@@ -39,15 +40,15 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 30px;
-    margin-right: 30px; /* Adjusted margin for content within the navigation bar */
+    margin-left: 20px;
+    margin-right: 20px; /* Adjusted margin for content within the navigation bar */
 }
 
 nav a {
     color: #ddd; /* Slightly less bright link text color */
     text-decoration: none; /* Remove underline */
     font-weight: bold; /* Add bold font */
-    font-size: 20px; /* Adjust font size */
+    font-size: 16px; /* Fixed font size for links */
     transition: color 0.3s ease-in-out; /* Smooth color transition on hover */
 }
 
@@ -64,11 +65,13 @@ nav a:hover {
 
 #contact h2 {
     color: #ddd;
+    font-size: 24px; /* Fixed font size for h2 */
 }
 
 #contact p {
     line-height: 1.5;
     margin-bottom: 20px;
+    font-size: 14px; /* Fixed font size for paragraphs */
 }
 
 #contact div {
@@ -97,4 +100,5 @@ footer {
     color: #ddd;
     width: 100%;
     border-top: 1.3px solid #ddd; /* Slightly less bright white line on top of the footer */
+    font-size: 14px; /* Fixed font size for the footer */
 }
