@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Joshua Furman || Personal Portfolio </title>
+    <title>Joshua Furman || Personal Portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="script.js"></script>
 </head>
 
 <body>
@@ -13,52 +14,96 @@
 <!-- Navigation bar (optional) -->
 <!-- Add links to navigate between sections -->
 <nav>
-    <h1>Joshua Furman</h1>
+    <h1>Personal Website!</h1>
     <ul>
-        <li><a href="about.html">About</a></li>
+        <li><a href="about.html">Quick Info</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="skillsAndHobbies.html">Skills</a></li>
+        <li><a href="skillsAndHobbies.html">About me</a></li>
     </ul>
 </nav>
 
-<!-- Contact Section -->
-<section id="contact">
+<!-- Profile and Contact Section -->
+<section id="profile-and-contact">
+        <div class="profile-container">
+            <img src="headshot1.png" alt="Profile Photo" class="profile-photo">
+            <p class="profile-text">Joshua Furman || Software Developer</p>
+        </div>
 
-    <div>
-        <label for="github"></label>
-        <a href="https://github.com/jafurman" target="_blank">
-            <img src="githubIcon.png" alt="GitHub Icon">
-        </a>
+    <div class="about-middle">
+        <table class="info-table">
+            <tr>
+                <td>Age</td>
+                <td>21</td>
+            </tr>
+            <tr>
+                <td>Phone</td>
+                <td>1(310)-713-5307</td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>jafbird52@gmail.com</td>
+            </tr>
+            <tr>
+                <td>Degree</td>
+                <td>Computer Science</td>
+            </tr>
+            <tr>
+                <td>Location</td>
+                <td>South Bay</td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>Cal Poly Pomona</td>
+            </tr>
+            <tr>
+                <td>Top 3 Languages</td>
+                <td>Python, C#, Java</td>
+            </tr>
+            <tr>
+                <td>Interested In</td>
+                <td>Game Development, Information Retrieval, AI/ML, Data</td>
+            </tr>
+            <tr>
+                <td>Likes</td>
+                <td>Cats, Learning, Outdoors, Gaming, Creating, Programming, Animation, Drawing</td>
+            </tr>
+
+
+            <!-- Add more rows for additional information -->
+        </table>
     </div>
 
-    <div>
-        <label for="linkedin"></label>
-        <a href="https://www.linkedin.com/in/joshua-furman-7784221ab/" target="_blank">
-            <img src="linkedinIcon.png" alt="LinkedIn Icon">
-        </a>
+    <div class="contact-container">
+            <div class="contact-item" data-text="GitHub profile">
+                <a href="https://github.com/jafurman" target="_blank">
+                    <img src="githubIcon.png" alt="GitHub Icon">
+                </a>
+            </div>
+
+            <div class="contact-item" data-text="LinkedIn profile">
+                <a href="https://www.linkedin.com/in/joshua-furman-7784221ab/" target="_blank">
+                    <img src="linkedinIcon.png" alt="LinkedIn Icon">
+                </a>
+            </div>
+
+            <div class="contact-item" data-text="Itch.io profile">
+                <a href="https://jafurman.itch.io/" target="_blank">
+                    <img src="itchIcon.png" alt="itch.io Icon">
+                </a>
+            </div>
+
+            <div class="contact-item" data-text="Email me">
+                <p><a href="mailto:jafbird52@gmail.com">
+                    <img src="gmailIcon.png" alt="gmailIcon">
+                </a></p>
+            </div>
     </div>
-
-    <div>
-        <label for="itch"></label>
-        <a href="https://jafurman.itch.io/" target="_blank">
-            <img src="itchIcon.png" alt="itch.io Icon">
-        </a>
-    </div>
-
-    <div>
-        <label for="email"></label>
-        <p><a href="mailto:jafbird52@gmail.com">
-            <img src="gmailIcon.png" alt="gmailIcon">
-        </a></p>
-    </div>
-
-
 </section>
-
 
 <footer>
     <p>&copy; 2023 Joshua Furman</p>
 </footer>
+
 
 </body>
 
