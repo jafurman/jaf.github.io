@@ -9,46 +9,47 @@
 <h2>Projects</h2>
 
 <div class="project">
-    <h3>2D Platformer (w/ Procedural Content Generation)</h3>
-    <p>Over the course of October 2022 to even now, I'm putting updates into this game purely for the fun. It started as a little project of mine that got out of hand.</p>
+    <h3>1. 2D Platformer (w/ Procedural Content Generation)</h3>
+    <h4>What was used: Unity, C#, Photoshop, Procedural Content Generation</h4>
+    <li>Source Code: <a href="https://github.com/jafurman/2DPlatformer-with-Procedrual-Generation">https://github.com/jafurman/2DPlatformer-with-Procedrual-Generation</a></li>
+    <li>Game Link: <a href="https://jafurman.itch.io/death">https://jafurman.itch.io/death</a></li>
+    <p>Description:
+        Over the course of October 2022 to even now, I'm putting updates into this game purely for the fun. It started as a little project of mine that got out of hand.
+    </p>
     <div class="project-images">
         <img src="project1_image1.jpg" alt="Project Image 1">
         <img src="project1_image2.jpg" alt="Project Image 2">
         <img src="project1_image3.jpg" alt="Project Image 3">
     </div>
-    <div class="full-rundown">
-        <p>
-            The 2D Platformer project is an ongoing endeavor that began in October 2022. It started as a small personal project and has evolved into a fully-fledged game. The key features include:
-        <ul>
-            <li>Procedural Content Generation for dynamic levels</li>
-            <li>Regular updates and improvements</li>
-            <li>Passionate development for the joy of the process</li>
-        </ul>
-        Stay tuned for more updates!
-        </p>
-    </div>
 </div>
 
 <div class="project">
-    <h3>Subreddit Web Spider and Scraper</h3>
-    <p>A Python bot that uses libraries like BeautifulSoup, Selenium, urllib, and more to traverse links starting from the www.reddit.com domain name...</p>
+    <h3>2. Subreddit Web Crawler and Scraper</h3>
+    <h4>What was used: Python, MongoDB, Flask, BeautifulSoup, Selenium, Urllib, Reddit </h4>
+    <li>Source Code: <a href="https://github.com/jafurman/CatRedditCrawler-WebPage">https://github.com/jafurman/CatRedditCrawler-WebPage</a></li>
+    <p>Description:
+        Yes, there is a Reddit API that can get me this data easily, but I learned how to make web crawlers from a web search course in school. I was intrigued and wanted to see where I could
+        possibly pull data from. Fueled by this need just try it for myself, I quickly ran into the issue of domains. Everywhere my frontier went was restricted to open so nothing was getting collected.
+        I decided to search for a specific domain, perhaps to create a vertical search engine, and found myself on www.reddit.com. I am an avid user of reddit, and I think there are solid topics for any category
+        of discussion with lots of specific detail within subreddits. That helped me decide to crawl specifically for urls containing: "www.reddit.com/r/{subredditName}". After successfully multithreading
+        the crawling logic, I was able to get around 1.4k documents(subreddits) in the database in around 30 minutes. I understand if I spent more time on the crawl logic it's definitely possible to crawl a large portion
+        of subreddits in Reddit. For example, if I were to start the frontier from multiple points of Reddit instead of one corner. I essentially "bottlenecked" myself by cutting the crawl to only one corner.
+        Once the subreddits were saved, I have a subredditParser.py where I scrape or parse the subreddit pages. I initially used BeautifulSoup and Urllib to open the link and take data, but I ran into an issue
+        where the subreddit web page was dynamic and loaded content later than subredditParser.py scraped it. Meaning, the data collected was null, so I used Selenium to open an instance of the web page,
+        wait 4 seconds for the content to certainly load, then collect what we need with BeautifulSoup, and store it back into a new collection in MongoDB. After I successfully scraped each subreddit, I was kind
+        of at loss with what to do with all of this data. I had the subreddit name, the description of it, subscribers, current users, and random images. This is when the project gets less serious and I throw my weird twist on it
+        and I decided to search for "cat-like words" in each subreddit. I like cats, and I was genuinely curious which subreddits discussed or consisted of cat content more than others. So I came up with a list of cat words, tied weights
+        to each word (by my own personal belief of if that word relates more to a cat), counted the occurrences of list words in each subreddit, and gave each subreddit a calculated "Cat Document Score". This was with the intention
+        of creating a "Cat Subreddit Search Engine" with my own collected data, but if I'm being 100% honest I had created a cosine similarity based search engine in a class that same week, so I stopped here and just displayed
+        the data using Flask to a random website I made for fun. It runs locally, so I sometimes play it and leave it on my screen like a screensaver. I always find a new subreddit I didn't see before.
+    </p>
     <div class="project-images">
-        <img src="project2_image1.jpg" alt="Project Image 1">
-        <img src="project2_image2.jpg" alt="Project Image 2">
-        <img src="project2_image3.jpg" alt="Project Image 3">
-    </div>
-    <div class="full-rundown">
-        <p>
-            The Subreddit Web Spider and Scraper project is a Python-based bot designed to traverse links on the www.reddit.com domain. Key aspects include:
-        <ul>
-            <li>Utilizes libraries like BeautifulSoup, Selenium, urllib, and more</li>
-            <li>Focused on efficient link traversal within the Reddit domain</li>
-            <li>Designed for web scraping and data extraction</li>
-        </ul>
-        Explore the world of web crawling with this versatile Python bot!
-        </p>
+        <img src="project1_image1.jpg" alt="Project Image 1">
+        <img src="project1_image2.jpg" alt="Project Image 2">
+        <img src="project1_image3.jpg" alt="Project Image 3">
     </div>
 </div>
+
 
 </body>
 </html>
