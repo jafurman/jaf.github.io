@@ -50,15 +50,22 @@ nav ul li {
 }
 
 nav a {
-    color: #ddd;
-    text-decoration: none;
+    padding: 10px;
+    background-color: #0077cc; /* Dark blue button, matching the navigation link hover color */
+    color: #ddd; /* Light text to match the body text color */
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
     font-weight: bold;
-    font-size: 20px;
-    transition: color 0.3s ease-in-out;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Apply the transition effect */
 }
 
 nav a:hover {
-    color: #0077cc;
+    background-color: #005080; /* Slightly darker blue on hover, matching the button hover color */
+    color: #fff; /* White text on hover */
 }
 
 /* Project Title */
@@ -82,22 +89,25 @@ h2 {
 .project h3 {
     color: #0077cc;
     margin-bottom: 10px;
-    font-size: 24px; /* Increase the font size for project titles */
+    font-size: 30px; /* Increase the font size for project titles */
 }
 
 .project h4 {
+    font-size: 20px;
     color: #ddd;
     margin-bottom: 15px;
 }
 
 /* Project Description */
 .project p {
-    line-height: 1.5;
+    font-size: 20px;
+    line-height: 2;
     margin-bottom: 20px;
 }
 
 /* Project Links */
 .project li {
+    font-size: 20px;
     margin-bottom: 10px;
 }
 
@@ -137,4 +147,21 @@ h2 {
         height: auto;
         margin-bottom: 10px;
     }
+}
+
+button {
+    padding: 10px;
+    background-color: #0077cc; /* Dark blue button, matching the navigation link hover color */
+    color: #ddd; /* Light text to match the body text color */
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #005080; /* Slightly darker blue on hover */
+    color: #fff; /* White text on hover */
 }
