@@ -1,0 +1,140 @@
+/* Reset Styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Body Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a2d;
+    color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Navigation Styles */
+nav {
+    background-color: #000;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    border-bottom: 1.3px solid #ddd;
+    position: relative;
+    z-index: 1;
+}
+
+nav h1 {
+    color: #ddd;
+    margin-left: 50px;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 30px;
+    margin-right: 50px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+    color: #0077cc;
+}
+
+/* Project Title */
+h2 {
+    font-size: 36px;
+    margin-top: 40px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Project Container */
+.project {
+    background-color: #333;
+    color: #ddd;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Project Titles */
+.project h3 {
+    color: #0077cc;
+    margin-bottom: 10px;
+    font-size: 24px; /* Increase the font size for project titles */
+}
+
+.project h4 {
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+/* Project Description */
+.project p {
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Project Links */
+.project li {
+    margin-bottom: 10px;
+}
+
+.project a {
+    color: #0077cc;
+}
+
+/* Project Images */
+.project-images {
+    display: flex;
+    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    justify-content: space-between;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.project-images img {
+    width: calc(50% - 5px); /* Set each image to take up half the container with a small gap in between */
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 800px) {
+    .project {
+        margin: 10px;
+    }
+
+    .project-images {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-images img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+}
