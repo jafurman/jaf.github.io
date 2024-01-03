@@ -12,17 +12,16 @@
     <ul>
         <li><a href="index.html">Landing Page</a></li>
         <li><a href="projects.html">Projects</a></li>
-        <li><a href="skillsAndHobbies.html">About me</a></li>
     </ul>
 </nav>
 
 <body>
 
 <div class="project">
-    <h2 id="projectDirectory">Project Directory</h2>
-    <a href="#p1">1. 2D Platformer (w/ Procedural Content Generation)</a>
-    <a href="#p2">2. Subreddit Web Crawler and Scraper</a>
-    <a href="#p3">3. Spotify Account Information and Manipulation (using the Spotify API)</a>
+    <h3 id="projectDirectory">Project Directory</h3>
+    <a href="#p1">1. 2D Platformer (w/ Procedural Content Generation)</a><br>
+    <a href="#p2">2. Subreddit Web Crawler and Scraper</a><br>
+    <a href="#p3">3. Spotify Account Information and Manipulation (using the Spotify API)</a><br>
 </div>
 
 
@@ -32,10 +31,11 @@
     <li>Source Code: <a href="https://github.com/jafurman/2DPlatformer-with-Procedrual-Generation">https://github.com/jafurman/2DPlatformer-with-Procedrual-Generation</a></li>
     <li>Game Link: <a href="https://jafurman.itch.io/death">https://jafurman.itch.io/death</a></li>
     <p id="projectDescription1" style="display: none;"><strong>Description:</strong>
+
         Over the course of October 2022 to even now, I'm putting updates into this game purely for the fun. It started as a little project of mine that got out of hand when in my CS4700 game
         Development class I was tasked with creating a level of a game. Anything I could think of using Unity. So, I created the easiest version of a game I could think of which was Mario platforming.
         It turned out to be pretty fun following the YouTube tutorials and I ended up adding more content of what I wanted to see. My imagination ran wild, and before I knew it a couple of months later I was
-        on the path to making a full-fledged game. There were countless iterations of art style, game progression, abilities, enemies, core gameplay, transitions, lighting, camera movement, etc. I found myself in a
+        on the path to making a full-fledged game. There were countless iterations of art style, game progression, abilities, enemies, core gameplay, transitions, lighting, camera movement, etc. I found myself in
         an awful programming loop where there was constant progression but no actual end in sight. Games really require a lot of attention in every aspect and corner or else they feel wrong. Immersion has to play
         a part, feel has to play a part, sound, movement, combat, dialogue, it all took so long for me to finalize. I love this project so much because at the end of the day it's the best show of what I can do.
         Sure, it's not perfect, but it was the learning process and the consistency of additions to this project that makes it so important to me. I ended up dropping it until I came across my undergraduate research:
@@ -46,6 +46,7 @@
         In order to make the maps look proper I would iterate through all tiles present and check the 8 spaces surrounding each tile to know which type of tile piece should be placed. Soon, corners, edges, and blank tiles were
         all in their respective locations. After adding in random enemy placement and start/end nodes, the PCG level was pretty much complete. I liked the idea of having the PCG levels staggered throughout the game, and the prebuilt original
         levels incorporated in between. This is easily the most spent time on a project I have, but I am very happy with how it is today. Hopefully, I figure out quality sound implementation and have this game 100% complete at some point.
+
     </p>
     <button onclick="toggleDescription('projectDescription1')">Toggle Description</button>
     <div class="project-images">
@@ -61,6 +62,7 @@
     <h4>What was used: Python, MongoDB, Flask, BeautifulSoup, Selenium, Urllib, Reddit </h4>
     <li>Source Code: <a href="https://github.com/jafurman/CatRedditCrawler-WebPage">https://github.com/jafurman/CatRedditCrawler-WebPage</a></li>
     <p id="projectDescription2" style="display: none;"><strong>Description:</strong>
+
         Yes, there is a Reddit API that can get me this data easily, but I learned how to make web crawlers from a web search course in school. I was intrigued and wanted to see where I could
         possibly pull data from. Fueled by this need just try it for myself, I quickly ran into the issue of domains. Everywhere my frontier went was restricted to open so nothing was getting collected.
         I decided to search for a specific domain, perhaps to create a vertical search engine, and found myself on www.reddit.com. I am an avid user of reddit, and I think there are solid topics for any category
@@ -75,6 +77,7 @@
         to each word (by my own personal belief of if that word relates more to a cat), counted the occurrences of list words in each subreddit, and gave each subreddit a calculated "Cat Document Score". This was with the intention
         of creating a "Cat Subreddit Search Engine" with my own collected data, but if I'm being 100% honest I had created a cosine similarity based search engine in a class that same week, so I stopped here and just displayed
         the data using Flask to a random website I made for fun. It runs locally, so I sometimes play it and leave it on my screen like a screensaver. I always find a new subreddit I didn't see before.
+
     </p>
     <button onclick="toggleDescription('projectDescription2')">Toggle Description</button>
     <div class="project-images">
@@ -91,6 +94,7 @@
     <h4>What was used: Python, SpotifyAPI</h4>
     <li>Source Code: <a href="https://github.com/jafurman/SpotifyAPIAccountInformation">https://github.com/jafurman/SpotifyAPIAccountInformation</a></li>
     <p id="projectDescription3" style="display: none;"><strong>Description:</strong>
+
         This project was started after my fascination of my own data. I always liked Spotify wrapped, the service that Spotify provides yearly where they
         show your top artists, top songs, any other relevant related "interesting" information. They always add something new every year, but I still felt
         it wasn't enough. Top 5 songs and artists didn't cut the quota, so I decided to look into the Spotify API. I had been using tons of Python at the time
@@ -100,6 +104,7 @@
         all artists with a popularity score over what I specified from my liked songs? The final options for this project are: 1. See up to 50 of an account's top artists. 2. See up to 50
         of an account's top tracks/songs. 3. See an amount of an account's liked songs. 4. Find the average popularity score of an account's liked songs. Then, finally, 5.
         Remove any songs from an account's liked songs with a popularity score over a specified number.
+
     </p>
     <button onclick="toggleDescription('projectDescription3')">Toggle Description</button>
     <div class="project-images">
