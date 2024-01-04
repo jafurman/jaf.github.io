@@ -121,11 +121,9 @@ h2 {
 
 .project a {
     color: #0077cc;
-}
-
-.project a {
     font-size: 20px;
     margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 /* Project Images */
