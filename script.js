@@ -29,3 +29,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (localStorage.getItem('hasClicked') === 'true') {
+        document.getElementById('greet-button').disabled = true;
+    }
+
+    document.getElementById('greet-button').addEventListener('click', function () {
+        if (localStorage.getItem('hasClicked') !== 'true') {
+            var visitCount = parseInt(sessionStorage.getItem('visitCount')) || 0;
+            visitCount++;
+            localStorage.setItem('visitCount', visitCount);
+            sessionStorage.setItem('visitCount', visitCount);
+            document.getElementById('visit-count').textContent = visitCount;
+            localStorage.setItem('hasClicked', 'true');
+            this.disabled = true;
+        }
+    });
+
+    var visitCount = localStorage.getItem('visitCount') || 0;
+    document.getElementById('visit-count').textContent = visitCount;
+});
+

@@ -29,9 +29,10 @@ nav {
 }
 
 nav h1 {
+    font-family: 'Courier New', Courier, monospace;
     color: #ddd;
     margin-left: 50px;
-    font-size: 35px;
+    font-size: 28px;
 }
 
 nav ul {
@@ -41,15 +42,10 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 nav a {
     padding: 10px;
-    background-color: #0077cc; /* Dark blue button, matching the navigation link hover color */
-    color: #ddd; /* Light text to match the body text color */
+    background-color: #0077cc;
+    color: #ddd;
     border: none;
     cursor: pointer;
     font-family: 'Courier New', Courier, monospace;
@@ -61,11 +57,38 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #005080; /* Slightly darker blue on hover, matching the button hover color */
-    color: #fff; /* White text on hover */
+    background-color: #005080;
+    color: #fff;
+}
+
+nav ul li {
+    display: inline-flex; /* Use flexbox for better alignment */
+    align-items: center; /* Vertically center the content */
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+nav button {
+    padding: 10px;
+    background-color: #0077cc;
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav button:hover {
+    background-color: #005080;
+    color: #fff;
 }
 
 #profile-and-contact {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -103,7 +126,7 @@ nav a:hover {
 }
 
 .profile-text {
-    font-size: 25px;
+    font-size: 20px;
     text-align: center;
 }
 
@@ -136,7 +159,7 @@ nav a:hover {
     content: attr(data-text);
     position: absolute;
     bottom: 50%;
-    right: calc(100% - 270px);
+    right: calc(100% - 320px);
     background-color: #2c2c4d;
     color: #fff;
     padding: 8px 15px;
@@ -194,4 +217,16 @@ th {
 footer {
     text-align: center;
     padding: 20px;
+}
+
+#count-display {
+    font-size: 15px;
+    background-color: #1a1a2d;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 800px; /* Adjust the margin-left as needed */
+    font-family: 'Courier New', Courier, monospace;
+    display: inline-block;
+    vertical-align: middle;
 }
