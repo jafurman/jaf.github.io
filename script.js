@@ -29,13 +29,11 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Function to update the count in localStorage and UI
     const updateCount = () => {
         const visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
         document.getElementById('visit-count').textContent = `You've visited this page ${visitCount} times.`;
     };
 
-    // Function to increment the count in localStorage
     const incrementCount = () => {
         let visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
         visitCount++;
@@ -43,17 +41,14 @@ document.addEventListener("DOMContentLoaded", function () {
         updateCount();
     };
 
-    // Button click event
     document.getElementById('greet-button').addEventListener('click', function () {
         incrementCount();
-        this.disabled = true; // Optionally disable the button after clicking
+        this.disabled = true;
     });
 
-    // Check if the button has been clicked
     if (localStorage.getItem('hasClicked') === 'true') {
         document.getElementById('greet-button').disabled = true;
     }
 
-    // Display the initial count
     updateCount();
 });
