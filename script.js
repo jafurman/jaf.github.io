@@ -28,26 +28,32 @@ document.addEventListener("DOMContentLoaded", function () {
             infoTable.style.transform = 'translateX(30%)';
         }
     });
-});
 
-document.addEventListener("DOMContentLoaded", function () {
+    // Function to update the count in localStorage and UI
+    const updateCount = () => {
+        const visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
+        document.getElementById('visit-count').textContent = `You've visited this page ${visitCount} times.`;
+    };
+
+    // Function to increment the count in localStorage
+    const incrementCount = () => {
+        let visitCount = parseInt(localStorage.getItem('visitCount')) || 0;
+        visitCount++;
+        localStorage.setItem('visitCount', visitCount);
+        updateCount();
+    };
+
+    // Button click event
+    document.getElementById('greet-button').addEventListener('click', function () {
+        incrementCount();
+        this.disabled = true; // Optionally disable the button after clicking
+    });
+
+    // Check if the button has been clicked
     if (localStorage.getItem('hasClicked') === 'true') {
         document.getElementById('greet-button').disabled = true;
     }
 
-    document.getElementById('greet-button').addEventListener('click', function () {
-        if (localStorage.getItem('hasClicked') !== 'true') {
-            var visitCount = parseInt(sessionStorage.getItem('visitCount')) || 0;
-            visitCount++;
-            localStorage.setItem('visitCount', visitCount);
-            sessionStorage.setItem('visitCount', visitCount);
-            document.getElementById('visit-count').textContent = visitCount;
-            localStorage.setItem('hasClicked', 'true');
-            this.disabled = true;
-        }
-    });
-
-    var visitCount = localStorage.getItem('visitCount') || 0;
-    document.getElementById('visit-count').textContent = visitCount;
+    // Display the initial count
+    updateCount();
 });
-
