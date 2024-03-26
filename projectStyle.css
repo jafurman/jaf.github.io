@@ -77,6 +77,7 @@ h2 {
 
 /* Project Container */
 .project {
+    width: 1000px;
     background-color: #333;
     color: #ddd;
     padding: 20px;
@@ -126,18 +127,18 @@ h2 {
     margin-top: 15px;
 }
 
-/* Project Images */
 .project-images {
     display: flex;
     flex-wrap: wrap; /* Allow images to wrap to the next line */
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
     max-width: 100%;
 }
 
 .project-images img {
-    width: calc(50% - 5px); /* Set each image to take up half the container with a small gap in between */
-    height: auto;
+    width: 750px; /* Set a fixed width for all images */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     margin-bottom: 10px;
 }
@@ -176,3 +177,17 @@ button:hover {
     background-color: #005080; /* Slightly darker blue on hover */
     color: #fff; /* White text on hover */
 }
+
+.buttons {
+    margin-top: 20px;
+        display: flex;
+        flex-wrap: wrap; /* Allow images to wrap to the next line */
+        justify-content: center;
+        align-items: center;
+
+}
+
+.buttons button {
+    margin-right: 10px;
+}
+
