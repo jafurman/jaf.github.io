@@ -70,14 +70,14 @@ nav a:hover {
 
 /* Project Title */
 h2 {
-    font-size: 36px;
+    font-size: 30px;
     margin-top: 40px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Project Container */
 .project {
-    width: 1000px;
+    width: 800px;
     background-color: #333;
     color: #ddd;
     padding: 20px;
@@ -90,11 +90,11 @@ h2 {
 .project h3 {
     color: #0077cc;
     margin-bottom: 10px;
-    font-size: 40px; /* Increase the font size for project titles */
+    font-size: 30px; /* Increase the font size for project titles */
 }
 
 .project h4 {
-    font-size: 30px;
+    font-size: 15px;
     color: #ddd;
     margin-bottom: 15px;
 }
@@ -171,6 +171,7 @@ button {
     font-size: 16px;
     margin-top: 10px;
     border-radius: 5px;
+
 }
 
 button:hover {
@@ -178,7 +179,7 @@ button:hover {
     color: #fff; /* White text on hover */
 }
 
-.buttons {
+.button {
     margin-top: 20px;
         display: flex;
         flex-wrap: wrap; /* Allow images to wrap to the next line */
