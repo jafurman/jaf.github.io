@@ -15,12 +15,15 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     margin: 0;
+    background-image: url('menu.png'); /* Replace 'homescreen.gif' with the path to your GIF file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker color with reduced opacity */
 }
 
-/* Navigation Styles */
 nav {
     background-color: #000;
-    padding: 30px;
+    padding: 18px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -32,9 +35,10 @@ nav {
 }
 
 nav h1 {
+    font-family: 'Arial', sans-serif;
     color: #ddd;
     margin-left: 50px;
-    font-size: 24px;
+    font-size: 28px;
 }
 
 nav ul {
@@ -44,28 +48,49 @@ nav ul {
     display: flex;
 }
 
-nav ul li {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
 nav a {
     padding: 10px;
-    background-color: #0077cc; /* Dark blue button, matching the navigation link hover color */
-    color: #ddd; /* Light text to match the body text color */
+    background-color: #0077cc;
+    color: #ddd;
     border: none;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
-    border-radius: 5px;
+    border-radius: 10px;
     text-decoration: none;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out; /* Apply the transition effect */
 }
 
 nav a:hover {
-    background-color: #005080; /* Slightly darker blue on hover, matching the button hover color */
-    color: #fff; /* White text on hover */
+    background-color: #005080;
+    color: #fff;
+}
+
+nav ul li {
+    display: inline-flex; /* Use flexbox for better alignment */
+    align-items: center; /* Vertically center the content */
+        margin-left: 20px;
+        margin-right: 20px;
+}
+
+nav button {
+    padding: 10px;
+    background-color: #0077cc;
+    color: #ddd;
+    border: none;
+    cursor: pointer;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav button:hover {
+    background-color: #005080;
+    color: #fff;
 }
 
 /* Project Title */
@@ -205,4 +230,6 @@ button:hover {
     border-radius: 5px;
 }
 
-
+.buttons button:hover {
+    background-color: #003b5a; /* Darker blue on hover */
+}

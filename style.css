@@ -5,7 +5,7 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #1a1a2d;
+    background-color: #1a1a2d; /* Dark background color */
     color: #ddd;
     display: flex;
     flex-direction: column;
@@ -13,11 +13,15 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     margin: 0;
+    background-image: url('homescreen.gif'); /* Replace 'homescreen.gif' with the path to your GIF file */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker color with reduced opacity */
 }
 
 nav {
     background-color: #000;
-    padding: 30px;
+    padding: 18px;
     text-align: center;
     display: flex;
     justify-content: space-between;
@@ -29,7 +33,7 @@ nav {
 }
 
 nav h1 {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     color: #ddd;
     margin-left: 50px;
     font-size: 28px;
@@ -48,7 +52,7 @@ nav a {
     color: #ddd;
     border: none;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
@@ -74,7 +78,7 @@ nav button {
     color: #ddd;
     border: none;
     cursor: pointer;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     font-size: 16px;
     font-weight: bold;
     border-radius: 10px;
@@ -88,7 +92,7 @@ nav button:hover {
 }
 
 #profile-and-contact {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
@@ -113,12 +117,12 @@ nav button:hover {
 }
 
 .profile-photo {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 30px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 
 .profile-photo:hover {
@@ -143,11 +147,11 @@ nav button:hover {
 }
 
 .contact-item img {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     cursor: pointer;
-    border-radius: 50%;
-    box-shadow: 0 3px 4px rgba(0, 0, 0, 0.8);
+    border-radius: 70%;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 1);
     transition: transform 0.3s ease-in-out;
 }
 
@@ -162,7 +166,7 @@ nav button:hover {
     right: calc(100% - 320px);
     background-color: #2c2c4d;
     color: #fff;
-    padding: 8px 15px;
+    padding: 12px 30px;
     border-radius: 8px;
     font-size: 18px;
     opacity: 0;
@@ -226,7 +230,7 @@ footer {
     padding: 10px;
     border-radius: 10px;
     margin-left: 800px; /* Adjust the margin-left as needed */
-    font-family: 'Courier New', Courier, monospace;
+    font-family: 'Arial', sans-serif;
     display: inline-block;
     vertical-align: middle;
 }
