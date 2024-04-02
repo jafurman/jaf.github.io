@@ -15,7 +15,7 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     margin: 0;
-    background-image: url('crawl.gif');
+
     background-size: cover;
     background-repeat: no-repeat;
     background-color: rgba(0, 0, 0, 0.5);
