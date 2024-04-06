@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
             profileContainer.style.transition = 'transform 0.5s ease-in-out';
             contactContainer.style.transition = 'transform 0.5s ease-in-out';
             infoTable.style.transition = 'transform 0.5s ease-in-out';
-            profileContainer.style.transform = 'translateX(-65%)';
-            contactContainer.style.transform = 'translateX(90%)';
+            profileContainer.style.transform = 'translateX(-60%)';
+            contactContainer.style.transform = 'translateX(80%)';
             infoTable.style.transform = 'translateX(50%)';
         } else {
             aboutMiddle.style.maxWidth = 0;
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
             contactContainer.style.transition = 'transform 0.5s ease-in-out';
             infoTable.style.transition = 'transform 0.5s ease-in-out';
             profileContainer.style.transform = 'translateX(-20%)';
-            contactContainer.style.transform = 'translateX(20%)';
+            contactContainer.style.transform = 'translateX(-10%)';
             infoTable.style.transform = 'translateX(30%)';
         }
     });
