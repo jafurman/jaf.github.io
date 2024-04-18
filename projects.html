@@ -110,7 +110,7 @@
 </div>
 
 <div class="project" id="p3">
-    <h3> 3. Spotify Account Information and Manipulation</h3>
+    <h3> 3. Spotify API (Playlist Maker with Genre Clustering, Extra Account Data)</h3>
     <li>What was used: Python, SpotifyAPI</li>
     <li>Source Code: <a href="https://github.com/jafurman/SpotifyAPIAccountInformation">https://github.com/jafurman/SpotifyAPIAccountInformation</a></li>
     <p id="projectDescription3" style="display: none;"><strong>Description:</strong>
@@ -124,6 +124,22 @@
         all artists with a popularity score over what I specified from my liked songs? The final options for this project are: 1. See up to 50 of an account's top artists. 2. See up to 50
         of an account's top tracks/songs. 3. See an amount of an account's liked songs. 4. Find the average popularity score of an account's liked songs. Then, finally, 5.
         Remove any songs from an account's liked songs with a popularity score over a specified number.
+
+
+        Updated as of April 16, 2024: I added in an automatic playlist maker! I liked that I could see all my genres, so in the second link I made another repo with a cloned version of
+        what I did in the previous project. I used matplotlib to display a pie chart which iterated through all of my liked songs and created a dataframe with pandas (basically just a
+        dictionary, but I had the intention of throwing this data into MongoDB if my friends decide to give me their info [I could cross-reference our differences in data]). I then take
+        the genres and created an inverted index that had {key: genre, value: songs tied to genre}. This helped me create a visualization of "Distribution of Genre in Liked Songs". At
+        this point, all I wanted to do was create a visualization, but then I had an idea. I had all the genres in an inverted index with each song associated. If I am able to plot
+        each genre on a scatter plot point, then I can run a clustering algorithm to "group" each similar genre together into playlists for myself. I ran into a quick issue, though, where
+        there are so many genres and some are similar names but aren't the same data. For example, "indie" music is different from "indie pop" despite both having "indie" in the name. Classic
+        data normalization issue, so I used the NLP library and toolkit in order to group those types of discrepancies together. Now, the program will look at "alternative rock" and "rock" as
+        the same genre. Maybe some users don't want this, but I personally have 466 liked songs currently, and this is my playlist maker so I did what I wanted. I got to use NLP as well, which
+        is cool. Then the clustering was ran using some more libraries, and I allowed the user to choose how many clusters (playlists) they want. Lastly, I had the clustering function return the
+        songs grouped together by genre as a list of strings (song names). I then had a function ran on each cluster made that uses the spotify API search option on each song and create a
+        playlist on the account tied to the activation token running the program. What resuled were three playlists for myself: Fast paced/exercise for one, rap/rnb/chill for two, and indie/pop
+        music for three. I am currently running this more for my friends and considering making it a web app if I have more time between finding a job! For now I'm just enjoying the pleasure of
+        personalized automation in my groupings of songs.
 
     </p>
 
