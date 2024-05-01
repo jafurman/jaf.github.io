@@ -19,10 +19,65 @@
 
 <div class="project">
     <h3 id="projectDirectory">Project Directory</h3>
-    <a href="#p2">1. Subreddit Web Crawler and Scraper</a><br>
-    <a href="#p1">2. 2D Platformer (w/ Procedural Content Generation)</a><br>
-    <a href="#p3">3. Spotify Account Information and Manipulation (using the Spotify API)</a><br>
-    <a href="#p4">4. CPP Business Faculty Search Engine</a>
+    <a href="#p5">1. Job Sourcing Automation</a><br>
+    <a href="#p2">2. Subreddit Web Crawler and Scraper</a><br>
+    <a href="#p1">3. 2D Platformer (w/ Procedural Content Generation)</a><br>
+    <a href="#p3">4. Spotify Account Information and Manipulation (using the Spotify API)</a><br>
+    <a href="#p4">5. CPP Business Faculty Search Engine</a>
+</div>
+
+<div class="project" id="p5">
+    <h3> 1. Overnight Job Hunt Automation</h3>
+    <li>What was used: Glassdoor, Python, MongoDB, Selenium, Sklearn (tf-idf vectorizer & cosine similarity) </li>
+    <li>Source Code: <a href="https://github.com/jafurman/JobFinder">https://github.com/jafurman/JobFinder</a></li>
+    <p id="projectDescription5" style="display: none;"><strong>Description:</strong>
+
+        There are so little commits in this repository because most of the development of this program was in the span of 3 days.
+        I simply did not take breaks because I was having such a good time making this. This project was made after I learned how
+        to properly scrape the internet for information. The job search these days is really rough, especially for students who graduated
+        and don't have any experience under their belt. The job search has made it almost even more demoralizing when you realize it's just
+        you sitting there and matching your resume to other possible jobs. All the sourcing and sitting and analyzing made me realize how much of a
+        time dump it was for me. With experience, I was able to get from my last web scraping project, I learned that the webdriver from
+        Selenium was much more powerful than I realized. Using the automation environment from Selenium, I leveraged Python to scrape one job board in specific:
+        Glassdoor. Glassdoor specifically because most job boards are very strict about your scraping their data (After all its easy to scrape data that has
+        already been sourced). Either way, Glassdoor was a perfect fit because although there 100% were sensitive rate limits, I was able to backdoor it by
+        meticulously carving the crawl model over time to not raise any flags.
+
+        Anyway, I knew I was going to make this model tailored to myself. The initial goal of the project is to get a list of relevant jobs matched from various endpoints/means
+        that I can look at the click of the button. To do this, I needed a list of concatenated search listings. When I apply, I am so quick and already know what I am applying for,
+        so I made a list of the relevant job titles and places. One section for remote, one section for specific cities I would be okay moving to, one for anywhere because I like the listing.
+        Either way, those are the two parameters of however many searches you want to do. So, here's the other kicker. Glassdoors search option to expand the listings made my each user
+        does NOT contribute to their per-minute count of rate/request limiting. So, if you click the "show more jobs" button indefinitely, it'll show all 50-3000 jobs. Put a little try/catch in there
+        if there isn't any job and that ONE search is going to grab all 3000 jobs.
+
+        Now I have a MongoDB collection of x jobs. The crawler originally stored all the links to each listing's full description, naturally, so we use those links and use webdriver once more
+        to pull the entire listing descriptions and store it as a string ( other metadata too, like how long ago it was posted, etc). This is the most time intensive as request limiting proved
+        to be a huge pain. Each parsed element was around 4 seconds total.. and you can do the math if you have 4000 listings to go through. Hence, the program title of "Overnight Job Search".
+
+        My professor in college always told me that once you get data into a database, you can do whatever you want with it. So, my idea ORIGINALLY after retrieving the information I want is finally
+        coming into play. I then preprocessed each job listing by lemmatization and tokenization. Both the user's resume skills and job listing's tokens are thrown into a tf-idf vectorizer where we
+        use cosine similarity to compare the likeness of each listing to your speciifc skill set. Because cosine similarity returns likeness in a scale of -1 to 1, we know that a job listing returned
+        back to us is very good if 1 or not alike at all if -1 (Literally a vector pointing in the opposite direction). This score wasn't good enough for me though, I felt that it didn't fully encompass
+        the automated finding that I wanted. My solution was to take the top skills listed in each listing and cross-reference the skills likeness and the job description likeness. This value came out much better
+        and from there I was satisfied with the finalized model (I needed to start applying to jobs again).
+
+        Overall the idea of automating something that normally takes up 3-4 hours a day was very motivating for me. I really loved making this project and I know it made me a better programmer in the long run
+        regardless of my success in finding a career later.
+
+    </p>
+    <div class="button">
+        <button onclick="toggleDescription('projectDescription5')">Description</button>
+    </div>
+
+    <div class="project-images">
+    <div class="video">
+    <video width="640" height="360" controls>
+        <source src="testing.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    </div>
+    </div>
+
 </div>
 
 <div class="project" id="p2">
@@ -51,7 +106,17 @@
     <div class="button">
         <button onclick="toggleDescription('projectDescription2')">Description</button>
     </div>
+
+
+
+
     <div class="project-images">
+        <div class="video">
+        <video width="640" height="360" controls>
+            <source src="testing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
         <img src="crawl.gif" alt="Project Image 1" class="image">
         <img src="parsing.gif" alt="Project Image 2" class="image">
         <img src="website.gif" alt="Project Image 3" class="image">
@@ -94,6 +159,12 @@
         <button onclick="toggleDescription('projectDescription1')">Description</button>
     </div>
     <div class="project-images">
+        <div class="video">
+        <video width="640" height="360" controls>
+            <source src="testing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        </div>
         <img src="gameplayExample.gif" alt="Project Image 5" class="image">
         <img src="pcgExample.gif" alt="Project Image 6" class="image">
         <img src="levelExamples.gif" alt="Project Image 7" class="image">
@@ -149,11 +220,15 @@
     </div>
 
     <div class="project-images">
+        <video width="640" height="360" controls>
+            <source src="testing.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
         <img src="menuExampleSpotify.gif" alt="Project Image 9" class="image">
         <img src="example.png" alt="Project Image 10" class="image">
-        <img src="4SpotExample.gif" alt="Project Image 12" class="image">
-        <img src="disLikedGenres.png" alt="Project Image 13" class="image">
-        <img src="Playlists.png" alt="Project Image 14" class="image">
+        <img src="4SpotExample.gif" alt="Project Image 11" class="image">
+        <img src="disLikedGenres.png" alt="Project Image 12" class="image">
+        <img src="Playlists.png" alt="Project Image 13" class="image">
     </div>
 
     <div class="buttons">
@@ -180,6 +255,14 @@
     </p>
     <div class="button">
         <button onclick="toggleDescription('projectDescription4')">Description</button>
+        </div>
+    <div class="project-images">
+    <div class="video">
+        <video width="640" height="360" controls>
+            <source src="FinalProjectVideoCS4250.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
     </div>
 </div>
 

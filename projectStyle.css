@@ -93,50 +93,48 @@ nav button:hover {
     color: #fff;
 }
 
-/* Project Title */
 h2 {
-    font-size: 30px;
+    font-size: 36px;
     margin-top: 40px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: #333; /* Darken the text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Soften the text shadow */
 }
 
 /* Project Container */
 .project {
-    width: 800px;
-    background-color: #333;
-    color: #ddd;
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 1000px; /* Change width to maximum width */
+    background-color: #f5f5f5; /* Lighten the background color */
+    color: #333; /* Darken the text color */
+    padding: 30px; /* Increase padding */
+    margin: 20px auto; /* Center the project container */
+    border-radius: 15px; /* Increase border radius */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Soften the box shadow */
 }
 
 /* Project Titles */
 .project h3 {
     color: #0077cc;
-    margin-bottom: 10px;
-    font-size: 30px; /* Increase the font size for project titles */
+    margin-bottom: 15px; /* Increase margin bottom */
+    font-size: 32px; /* Increase the font size for project titles */
 }
 
 .project h4 {
-    font-size: 15px;
-    color: #ddd;
-    margin-bottom: 15px;
+    font-size: 18px; /* Increase font size */
+    color: #555; /* Darken text color */
+    margin-bottom: 20px; /* Increase margin bottom */
 }
 
 /* Project Description */
 .project p {
-    font-size: 20px;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 10px;
-        max-width: 1600px;
-        margin: 0 auto;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 18px; /* Decrease font size slightly */
+    line-height: 1.6;
+    color: #555; /* Darken text color */
+    margin-bottom: 20px; /* Increase margin bottom */
+    padding: 20px; /* Increase padding */
+    background-color: #fff; /* Change background color to white */
+    border: 1px solid #ddd;
+    border-radius: 8px; /* Decrease border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Project Links */
@@ -154,15 +152,16 @@ h2 {
 
 .project-images {
     display: flex;
-    flex-wrap: wrap; /* Allow images to wrap to the next line */
+    flex-wrap: wrap; /* Allow images/videos to wrap to the next line */
     justify-content: center;
     align-items: center;
     margin-top: 20px;
     max-width: 100%;
 }
 
-.project-images img {
-    width: 750px; /* Set a fixed width for all images */
+.project-images img,
+.project-images video {
+    width: 750px; /* Set a fixed width for all images/videos */
     height: auto; /* Maintain aspect ratio */
     border-radius: 5px;
     margin-bottom: 10px;
@@ -196,6 +195,7 @@ button {
     font-size: 16px;
     margin-top: 10px;
     border-radius: 5px;
+    margin-bottom: 10px;
 
 }
 
@@ -232,4 +232,20 @@ button:hover {
 
 .buttons button:hover {
     background-color: #003b5a; /* Darker blue on hover */
+}
+
+.video {
+    display: flex;
+    flex-wrap: wrap; /* Allow images/videos to wrap to the next line */
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    max-width: 100%;
+}
+
+.project-images video {
+    max-width: 100%; /* Ensure videos don't exceed container width */
+    height: auto; /* Allow videos to maintain aspect ratio */
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
